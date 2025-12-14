@@ -47,7 +47,7 @@ OTP bots are automated tools that enable attackers to extract one-time passwords
 
 ## Full Features List
 
-#### Bank/Online Payments
+### Bank/Online Payments
 
 - _VBV_ OTP
 - _Paypal_ OTP
