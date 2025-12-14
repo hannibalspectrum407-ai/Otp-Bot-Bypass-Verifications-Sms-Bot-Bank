@@ -1,23 +1,26 @@
+require('dotenv').config();
+
 module.exports = {
-    setupdone: 'false',
+    // Prefer environment variables for secrets and configuration. Fall back to defaults for local dev.
+    setupdone: process.env.SETUPDONE || 'false',
 
     /**
      * Informations à propos du compte Twilio
      */
-    accountSid: '',
-    authToken: '',
-    callerid: '+yourcallerid',
+    accountSid: process.env.TWILIO_ACCOUNT_SID || '',
+    authToken: process.env.TWILIO_AUTH_TOKEN || '',
+    callerid: process.env.TWILIO_CALLERID || '+yourcallerid',
 
     /**
      * Informations à propos de l'API
      */
-    apipassword: 'passwordtochange',
-    serverurl: 'http://yourserverip:1337',
+    apipassword: process.env.API_PASSWORD || 'passwordtochange',
+    serverurl: process.env.SERVER_URL || 'http://yourserverip:1337',
 
     /**
      * Informations à propos du webhook discord
      */
-    discordwebhook: '',
+    discordwebhook: process.env.DISCORD_WEBHOOK || '',
 
     /**
      * Port sur lequel tourne le serveur express
